@@ -3,8 +3,8 @@ const words = ['радар', 'анна', 'машина', 'шалаш', 'каза
 const polyWords = [];
 
 for (let i = 0; i < words.length; i++) {
-    let newWord = words[i].split('').reverse().join('');
-    if (words[i] === newWord) {
+    let reversedWord = words[i].split('').reverse().join('');
+    if (words[i] === reversedWord) {
         polyWords.push(words[i]);
     }
 }

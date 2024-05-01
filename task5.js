@@ -1,11 +1,14 @@
-function numberToString(number) {
-    let numberToString = number.toString().split('');
-    for (let i = 0; i < numberToString.length; i++) {
-        if (numberToString[i] % 2 !== 0 && (i+1 < numberToString.length && numberToString[i+1] % 2 !== 0)) {
-            numberToString[i] += ':';
+function getFormatedString(number) {
+    let array = number.toString().split('');
+    for (let i = 0; i < array.length; i++) {
+        if (!array [i + 1]) {
+            break;
+        }
+        if (array[i] % 2 !== 0 && array[i+1] % 2 !== 0) {
+            array[i] += ':';
         }
     }
-    return numberToString.join('');
+    return array.join('');
 }
 
-console.log(numberToString(87193201));
+console.log(getFormatedString(87193201));
